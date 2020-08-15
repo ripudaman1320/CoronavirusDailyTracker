@@ -7,6 +7,27 @@
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
 <title>Corona Virus Tracker</title>
+<style type="text/css">
+.tableFixHead {
+	overflow-y: auto;
+	height: 500px;
+}
+
+.tableFixHead thead th {
+	position: sticky;
+	top: 0;
+}
+
+/* Just common table stuff. Really. */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 8px 16px;
+}
+</style>
 </head>
 <body>
 	<div class="container">
@@ -29,25 +50,26 @@
 				</div>
 			</div>
 		</div>
-
-		<table class="table">
-			<thead>
-				<tr>
-					<th>State</th>
-					<th>Country</th>
-					<th>Total Cases</th>
-					<th>New cases(Diff of 1 day)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="prod: ${locationstats}">
-					<td th:text="${prod.Province_State}"></td>
-					<td th:text="${prod.country}"></td>
-					<td th:text="${prod.latestTotalCases}"></td>
-					<td th:text="${prod.delta}"></td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="table-responsive tableFixHead">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th>State</th>
+						<th>Country</th>
+						<th>Total Cases</th>
+						<th>New cases(Diff of 1 day)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="prod: ${locationstats}">
+						<td th:text="${prod.Province_State}"></td>
+						<td th:text="${prod.country}"></td>
+						<td th:text="${prod.latestTotalCases}"></td>
+						<td th:text="${prod.delta}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
