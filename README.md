@@ -3,7 +3,8 @@ This is a spring boot app for coronavirus daily updates accross the globe. Any c
 
 Running Instructions-
 1. Make sure you have STS or eclipse with Spring pluggins installed. Also make sure you have java jdk 12 or above installed in your system.
-2. Import this project as a git project in your IDE.
-3. Clean your project and let all the dependecies to install from pom.xml
-4. After installing all dependencies go to root of the folder where you'll find this file CoronavirusTrackerApplication.java. Right click on it and Run as java application. 
-5. Application will then start on Tomcat at localhost:8080
+2. Import this project as a git project in your IDE. 
+3. After import, right click and select configure. Click on Convert to Maven project.
+4. Clean your project and let all the dependecies to install from pom.xml
+5. After installing all dependencies go to root of the folder where you'll find this file CoronavirusTrackerApplication.java. Right click on it and Run as java application. 
+6. Application will then start on Tomcat at localhost:8080
